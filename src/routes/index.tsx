@@ -12,10 +12,10 @@ import g4 from "@/assets/gallery-4.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Elite Hoops Academy — Elite Basketball Training" },
-      { name: "description", content: "Elite basketball training focused on skill development, vertical jump, speed and game performance." },
-      { property: "og:title", content: "Elite Hoops Academy" },
-      { property: "og:description", content: "Elite basketball training focused on skill development, vertical jump, speed and game performance." },
+      { title: "Green Edge Landscaping — Professional Landscaping Services" },
+      { name: "description", content: "Professional landscaping services including garden design, lawn installation outdoor renovations and property transformation." },
+      { property: "og:title", content: "Green Edge Landscaping" },
+      { property: "og:description", content: "Professional landscaping services including garden design, lawn installation outdoor renovations and property transformation." },
     ],
   }),
   component: Home,
@@ -49,8 +49,8 @@ function Nav() {
     >
       <div className="container-x flex h-16 items-center justify-between md:h-20">
         <a href="#home" className="flex items-center gap-2 font-display text-lg font-bold tracking-wide">
-          <span className="grid h-9 w-9 place-items-center rounded-md bg-primary text-primary-foreground">EH</span>
-          <span className="hidden sm:inline">ELITE HOOPS<span className="text-primary">.</span></span>
+          <span className="grid h-9 w-9 place-items-center rounded-md bg-primary text-primary-foreground">GE</span>
+          <span className="hidden sm:inline">Green Edge Landscaping<span className="text-primary">.</span></span>
         </a>
         <nav className="hidden lg:flex items-center gap-8">
           {NAV.map((n) => (
@@ -60,7 +60,7 @@ function Nav() {
           ))}
         </nav>
         <a href="#contact" className="hidden lg:inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:opacity-90 transition">
-          Book a Session <ArrowRight className="h-4 w-4" />
+          Get a free quote <ArrowRight className="h-4 w-4" />
         </a>
         <button
           aria-label="Toggle menu"
@@ -79,7 +79,7 @@ function Nav() {
               </a>
             ))}
             <a href="#contact" onClick={() => setOpen(false)} className="mt-2 inline-flex justify-center rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground">
-              Book a Session
+              Get a free quote
             </a>
           </div>
         </div>
@@ -101,28 +101,28 @@ function Hero() {
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-primary animate-fade-up">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-            Now Enrolling — Spring Season
+            Serving Melbourne & Surrounding Areas
           </div>
           <h1 className="mt-6 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] uppercase animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            ELITE BASKETBALL TRAINING <br />
-            FROM THE BEST OF THE BEST
+            PROFESSIONAL LANDSCAPING &<br />
+            OUTDOOR DESIGN
           </h1>
           <p className="mt-6 max-w-xl text-base md:text-lg text-muted-foreground animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            Elite basketball training focused on skill development, vertical jump, speed and game performance.
+            Transform your outdoor space with expert landscaping, premium garden design, lawn installation, retaining walls and complete backyard makeovers.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <a href="#contact" className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-primary-foreground hover:opacity-90 transition shadow-[var(--shadow-glow)]">
-              Book a Session <ArrowRight className="h-4 w-4" />
+              Get a free quote <ArrowRight className="h-4 w-4" />
             </a>
             <a href="#programs" className="inline-flex items-center gap-2 rounded-md border border-border bg-background/40 backdrop-blur px-6 py-3.5 text-sm font-bold uppercase tracking-wider hover:border-primary hover:text-primary transition">
-              View Programs
+              View Services
             </a>
           </div>
 
           <dl className="mt-14 grid grid-cols-3 gap-4 max-w-lg animate-fade-up" style={{ animationDelay: "0.4s" }}>
             {[
-              { k: "500+", v: "Athletes Trained" },
-              { k: "12\"", v: "Avg Vertical Gain" },
+              { k: "250+", v: "Projects Completed" },
+              { k: "100%", v: "Client Satisfaction" },
               { k: "15+", v: "Years Experience" },
             ].map((s) => (
               <div key={s.v} className="border-l-2 border-primary pl-3">
@@ -138,12 +138,12 @@ function Hero() {
         <div className="flex animate-marquee whitespace-nowrap py-3 w-max">
           {Array.from({ length: 2 }).map((_, i) => (
             <div key={i} className="flex shrink-0 items-center gap-12 px-6 font-display text-sm uppercase tracking-[0.3em] text-muted-foreground">
-              <span>Skill Development</span><span className="text-primary">●</span>
-              <span>Vertical Jump</span><span className="text-primary">●</span>
-              <span>Speed & Agility</span><span className="text-primary">●</span>
-              <span>Game IQ</span><span className="text-primary">●</span>
-              <span>Strength Training</span><span className="text-primary">●</span>
-              <span>Recovery</span><span className="text-primary">●</span>
+              <span>Garden Design</span><span className="text-primary">●</span>
+              <span>Lawn Installation</span><span className="text-primary">●</span>
+              <span>Retaining Walls</span><span className="text-primary">●</span>
+              <span>Outdoor Renovations</span><span className="text-primary">●</span>
+              <span>Irrigation Systems</span><span className="text-primary">●</span>
+              <span>Property Maintenance</span><span className="text-primary">●</span>
             </div>
           ))}
         </div>
@@ -165,12 +165,12 @@ function About() {
           </div>
         </div>
         <div>
-          <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">About the Coach</span>
+          <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">About us</span>
           <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
-            Built by a player. <br /> Forged for the <span className="text-primary">game.</span>
+            Built on quality. <br /> Designed to <span className="text-primary">impress.</span>
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
-            Coach Marcus Reed is a former Division I guard turned performance specialist. After playing professionally overseas, he returned home to build a program that develops complete athletes — not just scorers. His method blends biomechanics, sport science, and old-school grit.
+           Green Edge Landscaping is dedicated to creating beautiful outdoor spaces that add value, functionality and curb appeal. From small garden upgrades to complete landscape transformations, we deliver professional results with attention to every detail.
           </p>
 
           <div className="mt-8 grid sm:grid-cols-2 gap-4">
@@ -200,10 +200,32 @@ function About() {
 }
 
 const PROGRAMS = [
-  { icon: Target, title: "Individual Training", desc: "1-on-1 sessions tailored to your position, level, and goals. Skill work, shooting mechanics, and film breakdown.", price: "From $85/session", tag: "Most Popular" },
-  { icon: Users, title: "Small Group Training", desc: "High-intensity 3–6 player sessions. Compete, learn, and grow with athletes pushing your level.", price: "From $45/session" },
-  { icon: Zap, title: "Vertical Jump Program", desc: "8-week explosive performance system. Avg gain of 8–12 inches through plyometrics, strength, and reactive training.", price: "8-week block · $599", tag: "Results Guaranteed" },
-  { icon: Calendar, title: "Holiday Camps", desc: "Multi-day intensive camps during school breaks. Full-day immersion in skills, scrimmages, and recovery.", price: "From $299/camp" },
+  {
+    icon: Target,
+    title: "Garden Design",
+    desc: "Custom garden layouts designed to enhance your property's beauty, functionality, and value. From modern landscapes to classic garden designs.",
+    price: "Free Consultation",
+    tag: "Most Popular"
+  },
+  {
+    icon: Users,
+    title: "Lawn Installation",
+    desc: "Professional turf installation and lawn renovations for a lush, healthy, and low-maintenance outdoor space.",
+    price: "Custom Quote"
+  },
+  {
+    icon: Zap,
+    title: "Retaining Walls & Hardscaping",
+    desc: "Quality retaining walls, pathways, edging, and outdoor features built to improve both appearance and functionality.",
+    price: "Custom Quote",
+    tag: "Premium Service"
+  },
+  {
+    icon: Calendar,
+    title: "Complete Landscape Transformations",
+    desc: "Full outdoor renovations including gardens, lawns, paving, lighting, and outdoor living areas tailored to your vision.",
+    price: "Free On-Site Quote"
+  },
 ];
 
 function Programs() {
@@ -312,10 +334,10 @@ function Testimonials() {
 
 function Gallery() {
   const images = [
-    { src: g3, label: "Team Training", span: "md:col-span-2 md:row-span-2" },
-    { src: g1, label: "Skill Work" },
-    { src: g2, label: "Game Highlights" },
-    { src: g4, label: "Vertical Training", span: "md:col-span-2" },
+    { src: g3, label: "Environmental", span: "md:col-span-2 md:row-span-2" },
+    { src: g1, label: "Detailing" },
+    { src: g2, label: "Aesthetic" },
+    { src: g4, label: "Functional", span: "md:col-span-2" },
   ];
   return (
     <section id="gallery" className="relative py-24 md:py-32 bg-card/30">
@@ -324,7 +346,7 @@ function Gallery() {
           <div>
             <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">In The Gym</span>
             <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase">
-              The <span className="text-primary">Grind</span>
+              The <span className="text-primary">Detail</span>
             </h2>
           </div>
           <p className="max-w-md text-muted-foreground">A look inside our facility — training sessions, player highlights, and moments that define the program.</p>
@@ -364,7 +386,7 @@ function Contact() {
           <div className="mt-10 space-y-5">
             {[
               { icon: Phone, label: "Call", value: "(555) 234-8821" },
-              { icon: Mail, label: "Email", value: "train@elitehoopsacademy.com" },
+              { icon: Mail, label: "Email", value: "train@greenedgelandscaping.com" },
               { icon: MapPin, label: "Facility", value: "2840 Court Street, Building B\nAustin, TX 78704" },
             ].map((c) => (
               <div key={c.label} className="flex gap-4">
@@ -387,7 +409,7 @@ function Contact() {
                 <Trophy className="h-8 w-8" />
               </div>
               <h3 className="font-display text-2xl font-bold uppercase">You're In.</h3>
-              <p className="mt-2 text-muted-foreground">We'll be in touch within 24 hours to schedule your assessment.</p>
+              <p className="mt-2 text-muted-foreground">We'll be in touch within 24 hours to tend to your needs.</p>
             </div>
           ) : (
             <div className="grid sm:grid-cols-2 gap-5">
@@ -434,8 +456,8 @@ function Footer() {
       <div className="container-x py-14 grid md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2 font-display text-xl font-bold">
-            <span className="grid h-9 w-9 place-items-center rounded-md bg-primary text-primary-foreground">EH</span>
-            ELITE HOOPS<span className="text-primary">.</span>
+            <span className="grid h-9 w-9 place-items-center rounded-md bg-primary text-primary-foreground">GE</span>
+            Green Edge Landscaping<span className="text-primary">.</span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">Building elite basketball athletes through skill, strength, and relentless work.</p>
           <div className="mt-6 flex gap-3">
@@ -456,14 +478,14 @@ function Footer() {
           <div className="text-xs uppercase tracking-wider font-bold text-primary mb-4">Contact</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>(555) 234-8821</li>
-            <li>train@elitehoopsacademy.com</li>
+            <li>train@greenedgelandscaping.com</li>
             <li>2840 Court Street, Austin TX</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-border">
         <div className="container-x py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <span>© {new Date().getFullYear()} Elite Hoops Academy. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Green Edge Landscaping. All rights reserved.</span>
           <span>Train Hard. Train Smart.</span>
         </div>
       </div>
