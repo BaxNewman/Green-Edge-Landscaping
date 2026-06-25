@@ -251,7 +251,7 @@ return ( <section id="programs" className="relative py-24 md:py-32 bg-gradient-t
 Landscaping <span className="text-primary">Solutions</span> </h2> </div> <p className="max-w-md text-muted-foreground">
 From simple garden upgrades to complete outdoor transformations, every project is designed to improve your property's appearance, value, and functionality. </p> </div>
 
-```
+
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
       {PROGRAMS.map((p, i) => (
         <article key={p.title} className="group relative flex flex-col bg-card border border-border rounded-md p-6 hover:border-primary transition-all duration-300 hover:-translate-y-1">
@@ -349,7 +349,7 @@ What Our <span className="text-primary">Clients Say</span> </h2> </div>
     </div>
   </div>
 </section>
-```
+
 
 );
 }
@@ -367,7 +367,7 @@ return ( <section id="gallery" className="relative py-24 md:py-32 bg-card/30"> <
 Our Work </span> <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase">
 Recent <span className="text-primary">Projects</span> </h2> </div>
 
-```
+
       <p className="max-w-md text-muted-foreground">
         Explore some of our completed landscaping projects, showcasing
         premium garden designs, lawn installations, and outdoor
@@ -404,7 +404,7 @@ Recent <span className="text-primary">Projects</span> </h2> </div>
     </div>
   </div>
 </section>
-```
+
 
 );
 }
