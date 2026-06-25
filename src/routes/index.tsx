@@ -311,7 +311,7 @@ function Testimonials() {
 return ( <section id="testimonials" className="relative py-24 md:py-32"> <div className="container-x"> <div className="text-center max-w-2xl mx-auto mb-14"> <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Client Reviews</span> <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase">
 What Our <span className="text-primary">Clients Say</span> </h2> </div>
 
-```
+
     <div className="grid md:grid-cols-3 gap-6">
       {TESTIMONIALS.map((t) => (
         <figure key={t.name} className="relative flex flex-col bg-card border border-border rounded-md p-7 hover:border-primary/60 transition">
