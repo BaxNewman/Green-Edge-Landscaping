@@ -36,32 +36,32 @@
   --shadow-glow: 0 0 60px -10px color-mix(in oklab, var(--primary) 60%, transparent);
   --shadow-card: 0 20px 50px -20px oklch(0 0 0 / 0.6);
 
-  --gradient-primary: linear-gradient(135deg, oklch(0.72 0.19 45), oklch(0.62 0.21 35));
+  --gradient-primary: linear-gradient(135deg, oklch(0.65 0.18 145), oklch(0.45 0.16 135));
   --gradient-fade: linear-gradient(180deg, transparent, oklch(0.06 0 0));
 }
 
 :root {
   --radius: 0.5rem;
-  /* Dark sports academy palette - always dark */
+  /* Modern landscaping company palette - dark green theme */
   --background: oklch(0.06 0 0);              /* near-black */
   --foreground: oklch(0.98 0 0);              /* white */
   --card: oklch(0.10 0 0);
   --card-foreground: oklch(0.98 0 0);
   --popover: oklch(0.10 0 0);
   --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.68 0.20 45);             /* vivid orange */
+  --primary: oklch(0.55 0.18 145);             /* natural green */
   --primary-foreground: oklch(0.06 0 0);
   --secondary: oklch(0.16 0 0);
   --secondary-foreground: oklch(0.98 0 0);
   --muted: oklch(0.14 0 0);
   --muted-foreground: oklch(0.65 0 0);
-  --accent: oklch(0.68 0.20 45);
+  --accent: oklch(0.65 0.18 145);
   --accent-foreground: oklch(0.06 0 0);
   --destructive: oklch(0.62 0.24 27);
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(1 0 0 / 0.10);
   --input: oklch(1 0 0 / 0.12);
-  --ring: oklch(0.68 0.20 45);
+  --ring: oklch(0.55 0.18 145);
 }
 
 .dark {
