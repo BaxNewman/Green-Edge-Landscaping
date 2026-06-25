@@ -280,7 +280,7 @@ From simple garden upgrades to complete outdoor transformations, every project i
     </div>
   </div>
 </section>
-```
+
 
 );
 }
