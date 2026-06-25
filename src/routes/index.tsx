@@ -92,7 +92,13 @@ function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroDunk} alt="Basketball player dunking" width={1600} height={1200} className="h-full w-full object-cover object-right" />
+        <img 
+  src={heroGarden} 
+  alt="Beautiful landscaped outdoor garden design" 
+  width={1600} 
+  height={1200} 
+  className="h-full w-full object-cover object-right" 
+/>
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
       </div>
@@ -104,8 +110,8 @@ function Hero() {
             Serving Melbourne & Surrounding Areas
           </div>
           <h1 className="mt-6 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] uppercase animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            PROFESSIONAL LANDSCAPING &<br />
-            OUTDOOR DESIGN
+           TRANSFORM YOUR OUTDOOR SPACE<br />
+           WITH EXPERT LANDSCAPING
           </h1>
           <p className="mt-6 max-w-xl text-base md:text-lg text-muted-foreground animate-fade-up" style={{ animationDelay: "0.2s" }}>
             Transform your outdoor space with expert landscaping, premium garden design, lawn installation, retaining walls and complete backyard makeovers.
@@ -114,7 +120,7 @@ function Hero() {
             <a href="#contact" className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-primary-foreground hover:opacity-90 transition shadow-[var(--shadow-glow)]">
               Get a free quote <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="#programs" className="inline-flex items-center gap-2 rounded-md border border-border bg-background/40 backdrop-blur px-6 py-3.5 text-sm font-bold uppercase tracking-wider hover:border-primary hover:text-primary transition">
+            <a href="#services" className="inline-flex items-center gap-2 rounded-md border border-border bg-background/40 backdrop-blur px-6 py-3.5 text-sm font-bold uppercase tracking-wider hover:border-primary hover:text-primary transition">
               View Services
             </a>
           </div>
