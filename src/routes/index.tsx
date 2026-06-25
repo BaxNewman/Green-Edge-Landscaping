@@ -156,44 +156,56 @@ function About() {
   return (
     <section id="about" className="relative py-24 md:py-32">
       <div className="container-x grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
         <div className="relative">
           <div className="absolute -inset-4 border border-primary/30 rounded-md -z-10" />
-          <img src={trainerImg} alt="Coach Marcus Reed" width={1024} height={1280} loading="lazy" className="w-full h-[500px] md:h-[640px] object-cover rounded-md" />
-          <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-6 py-5 rounded-md max-w-[220px]">
-            <div className="font-display text-3xl font-bold leading-none">15+</div>
-            <div className="text-xs uppercase tracking-wider mt-1 font-semibold">Years coaching elite athletes</div>
-          </div>
+
+          <img
+            src="/landscaping-team.jpg"
+            alt="Professional landscaping team working"
+            className="rounded-md w-full object-cover"
+          />
         </div>
+
         <div>
-          <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">About us</span>
-          <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
-            Built on quality. <br /> Designed to <span className="text-primary">impress.</span>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            Creating Beautiful Outdoor Spaces
           </h2>
-          <p className="mt-6 text-muted-foreground leading-relaxed">
-           Green Edge Landscaping is dedicated to creating beautiful outdoor spaces that add value, functionality and curb appeal. From small garden upgrades to complete landscape transformations, we deliver professional results with attention to every detail.
+
+          <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
+            We transform ordinary yards into stunning outdoor spaces designed
+            for relaxation, entertaining, and enjoying nature. Our experienced
+            landscaping team combines creativity, quality workmanship, and
+            attention to detail to bring your vision to life.
           </p>
 
-          <div className="mt-8 grid sm:grid-cols-2 gap-4">
-            {[
-              { icon: Trophy, t: "D1 Player", d: "4-year scholarship athlete" },
-              { icon: Star, t: "Pro Experience", d: "5 seasons overseas" },
-              { icon: Users, t: "Certified Trainer", d: "NSCA & USA Basketball" },
-              { icon: Target, t: "Results Driven", d: "500+ athletes developed" },
-            ].map((x) => (
-              <div key={x.t} className="flex gap-3 border border-border rounded-md p-4 hover:border-primary/60 transition">
-                <x.icon className="h-6 w-6 text-primary shrink-0 mt-0.5" />
-                <div>
-                  <div className="font-semibold">{x.t}</div>
-                  <div className="text-sm text-muted-foreground">{x.d}</div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
+            From garden makeovers and lawn care to complete landscape designs,
+            we provide reliable solutions that improve the beauty and value of
+            your property.
+          </p>
 
-          <blockquote className="mt-10 border-l-4 border-primary pl-5 italic text-foreground/90">
-            "Our mission is simple — outwork yesterday. Every rep, every drill, every athlete walks out stronger than they walked in."
-          </blockquote>
+          <div className="mt-8 grid grid-cols-2 gap-6">
+            <div>
+              <h3 className="text-3xl font-bold text-primary">
+                10+
+              </h3>
+              <p className="text-muted-foreground">
+                Years Experience
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-3xl font-bold text-primary">
+                500+
+              </h3>
+              <p className="text-muted-foreground">
+                Projects Completed
+              </p>
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
   );
@@ -229,142 +241,166 @@ const PROGRAMS = [
 ];
 
 function Programs() {
-  return (
-    <section id="programs" className="relative py-24 md:py-32 bg-gradient-to-b from-background to-card/30">
-      <div className="container-x">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">What We Offer</span>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase">
-              Training <span className="text-primary">Programs</span>
-            </h2>
+return ( <section id="programs" className="relative py-24 md:py-32 bg-gradient-to-b from-background to-card/30"> <div className="container-x"> <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14"> <div> <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Our Services</span> <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase">
+Landscaping <span className="text-primary">Solutions</span> </h2> </div> <p className="max-w-md text-muted-foreground">
+From simple garden upgrades to complete outdoor transformations, every project is designed to improve your property's appearance, value, and functionality. </p> </div>
+
+```
+    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {PROGRAMS.map((p, i) => (
+        <article key={p.title} className="group relative flex flex-col bg-card border border-border rounded-md p-6 hover:border-primary transition-all duration-300 hover:-translate-y-1">
+          {p.tag && (
+            <span className="absolute -top-3 left-6 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
+              {p.tag}
+            </span>
+          )}
+          <div className="grid h-12 w-12 place-items-center rounded-md bg-primary/10 text-primary mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition">
+            <p.icon className="h-6 w-6" />
           </div>
-          <p className="max-w-md text-muted-foreground">
-            Every program is structured around measurable progress — track your stats from day one to game day.
-          </p>
-        </div>
+          <h3 className="font-display text-xl font-bold uppercase">{p.title}</h3>
+          <p className="mt-2 text-sm text-muted-foreground flex-1">{p.desc}</p>
+          <div className="mt-5 pt-5 border-t border-border flex items-center justify-between">
+            <span className="text-sm font-semibold text-primary">{p.price}</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">0{i + 1}</span>
+          </div>
+        </article>
+      ))}
+    </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {PROGRAMS.map((p, i) => (
-            <article key={p.title} className="group relative flex flex-col bg-card border border-border rounded-md p-6 hover:border-primary transition-all duration-300 hover:-translate-y-1">
-              {p.tag && (
-                <span className="absolute -top-3 left-6 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
-                  {p.tag}
-                </span>
-              )}
-              <div className="grid h-12 w-12 place-items-center rounded-md bg-primary/10 text-primary mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition">
-                <p.icon className="h-6 w-6" />
-              </div>
-              <h3 className="font-display text-xl font-bold uppercase">{p.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground flex-1">{p.desc}</p>
-              <div className="mt-5 pt-5 border-t border-border flex items-center justify-between">
-                <span className="text-sm font-semibold text-primary">{p.price}</span>
-                <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">0{i + 1}</span>
-              </div>
-            </article>
-          ))}
-        </div>
+    <div className="mt-12 text-center">
+      <a href="#contact" className="inline-flex items-center gap-2 rounded-md bg-primary px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-primary-foreground hover:opacity-90 transition">
+        Request a Free Quote <ArrowRight className="h-4 w-4" />
+      </a>
+    </div>
+  </div>
+</section>
+```
 
-        <div className="mt-12 text-center">
-          <a href="#contact" className="inline-flex items-center gap-2 rounded-md bg-primary px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-primary-foreground hover:opacity-90 transition">
-            Find Your Program <ArrowRight className="h-4 w-4" />
-          </a>
-        </div>
-      </div>
-    </section>
-  );
+);
 }
 
+
 const TESTIMONIALS = [
-  { name: "Jordan M.", role: "HS Senior · D1 Commit", quote: "Added 11 inches to my vertical in one off-season. Coach Reed's program got me looks from schools I never thought possible.", stat: "+11\" Vertical" },
-  { name: "Sarah K.", role: "Club Captain · 16U", quote: "My handle and confidence transformed. Went from bench to starting point guard in one season. Best decision my family made.", stat: "Starter PG" },
-  { name: "Tyrese B.", role: "Middle School", quote: "I came in barely making layups. Now I'm dropping 20+ a game and our team made playoffs for the first time in 5 years.", stat: "20+ PPG" },
+{
+name: "Michael T.",
+role: "Homeowner",
+quote: "Green Edge completely transformed our backyard. The team was professional, reliable, and the finished result exceeded our expectations.",
+stat: "5-Star Review"
+},
+{
+name: "Emma R.",
+role: "Property Owner",
+quote: "From the initial consultation to the final touches, everything was handled professionally. Our garden has never looked better.",
+stat: "100% Satisfied"
+},
+{
+name: "David P.",
+role: "Local Resident",
+quote: "Excellent workmanship and attention to detail. The new landscaping has completely changed the look of our home.",
+stat: "Completed On Time"
+},
 ];
 
 function Testimonials() {
-  return (
-    <section id="testimonials" className="relative py-24 md:py-32">
-      <div className="container-x">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Real Results</span>
-          <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase">
-            Hear from <span className="text-primary">our athletes</span>
-          </h2>
-        </div>
+return ( <section id="testimonials" className="relative py-24 md:py-32"> <div className="container-x"> <div className="text-center max-w-2xl mx-auto mb-14"> <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Client Reviews</span> <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase">
+What Our <span className="text-primary">Clients Say</span> </h2> </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {TESTIMONIALS.map((t) => (
-            <figure key={t.name} className="relative flex flex-col bg-card border border-border rounded-md p-7 hover:border-primary/60 transition">
-              <Quote className="h-8 w-8 text-primary/40 mb-4" />
-              <blockquote className="text-foreground/90 leading-relaxed flex-1">"{t.quote}"</blockquote>
-              <div className="mt-6 pt-6 border-t border-border flex items-center justify-between">
-                <figcaption>
-                  <div className="font-semibold">{t.name}</div>
-                  <div className="text-xs text-muted-foreground uppercase tracking-wider mt-0.5">{t.role}</div>
-                </figcaption>
-                <div className="text-right">
-                  <div className="font-display text-lg font-bold text-primary">{t.stat}</div>
-                </div>
-              </div>
-            </figure>
-          ))}
-        </div>
-
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { l: "Avg Vertical Gain", b: "22\"", a: "33\"" },
-            { l: "40-Yard Sprint", b: "5.2s", a: "4.6s" },
-            { l: "3PT %", b: "28%", a: "41%" },
-            { l: "Free Throw %", b: "62%", a: "84%" },
-          ].map((m) => (
-            <div key={m.l} className="bg-card border border-border rounded-md p-5 text-center">
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">{m.l}</div>
-              <div className="mt-3 flex items-baseline justify-center gap-2">
-                <span className="font-display text-xl text-muted-foreground line-through">{m.b}</span>
-                <ArrowRight className="h-4 w-4 text-primary" />
-                <span className="font-display text-2xl md:text-3xl font-bold text-primary">{m.a}</span>
-              </div>
+```
+    <div className="grid md:grid-cols-3 gap-6">
+      {TESTIMONIALS.map((t) => (
+        <figure key={t.name} className="relative flex flex-col bg-card border border-border rounded-md p-7 hover:border-primary/60 transition">
+          <Quote className="h-8 w-8 text-primary/40 mb-4" />
+          <blockquote className="text-foreground/90 leading-relaxed flex-1">"{t.quote}"</blockquote>
+          <div className="mt-6 pt-6 border-t border-border flex items-center justify-between">
+            <figcaption>
+              <div className="font-semibold">{t.name}</div>
+              <div className="text-xs text-muted-foreground uppercase tracking-wider mt-0.5">{t.role}</div>
+            </figcaption>
+            <div className="text-right">
+              <div className="font-display text-lg font-bold text-primary">{t.stat}</div>
             </div>
-          ))}
+          </div>
+        </figure>
+      ))}
+    </div>
+
+    <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+      {[
+        { l: "Projects Completed", b: "0", a: "250+" },
+        { l: "Client Satisfaction", b: "0%", a: "100%" },
+        { l: "Years Experience", b: "0", a: "15+" },
+        { l: "Free Quotes", b: "0", a: "Available" },
+      ].map((m) => (
+        <div key={m.l} className="bg-card border border-border rounded-md p-5 text-center">
+          <div className="text-xs uppercase tracking-wider text-muted-foreground">{m.l}</div>
+          <div className="mt-3 flex items-baseline justify-center gap-2">
+            <span className="font-display text-xl text-muted-foreground line-through">{m.b}</span>
+            <ArrowRight className="h-4 w-4 text-primary" />
+            <span className="font-display text-2xl md:text-3xl font-bold text-primary">{m.a}</span>
+          </div>
         </div>
-      </div>
-    </section>
-  );
+      ))}
+    </div>
+  </div>
+</section>
+```
+
+);
 }
 
+
 function Gallery() {
-  const images = [
-    { src: g3, label: "Environmental", span: "md:col-span-2 md:row-span-2" },
-    { src: g1, label: "Detailing" },
-    { src: g2, label: "Aesthetic" },
-    { src: g4, label: "Functional", span: "md:col-span-2" },
-  ];
-  return (
-    <section id="gallery" className="relative py-24 md:py-32 bg-card/30">
-      <div className="container-x">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">In The Gym</span>
-            <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase">
-              The <span className="text-primary">Detail</span>
-            </h2>
+const images = [
+{ src: g3, label: "Garden Design", span: "md:col-span-2 md:row-span-2" },
+{ src: g1, label: "Lawn Installation" },
+{ src: g2, label: "Outdoor Living" },
+{ src: g4, label: "Landscape Transformation", span: "md:col-span-2" },
+];
+
+return ( <section id="gallery" className="relative py-24 md:py-32 bg-card/30"> <div className="container-x"> <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12"> <div> <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">
+Our Work </span> <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase">
+Recent <span className="text-primary">Projects</span> </h2> </div>
+
+```
+      <p className="max-w-md text-muted-foreground">
+        Explore some of our completed landscaping projects, showcasing
+        premium garden designs, lawn installations, and outdoor
+        transformations.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-[240px] gap-3">
+      {images.map((img, i) => (
+        <div
+          key={i}
+          className={`relative overflow-hidden rounded-md group ${
+            img.span || ""
+          }`}
+        >
+          <img
+            src={img.src}
+            alt={img.label}
+            width={1024}
+            height={1024}
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent opacity-80 group-hover:opacity-60 transition" />
+
+          <div className="absolute bottom-4 left-4 right-4">
+            <span className="font-display text-lg uppercase font-bold">
+              {img.label}
+            </span>
           </div>
-          <p className="max-w-md text-muted-foreground">A look inside our facility — training sessions, player highlights, and moments that define the program.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-[240px] gap-3">
-          {images.map((img, i) => (
-            <div key={i} className={`relative overflow-hidden rounded-md group ${img.span || ""}`}>
-              <img src={img.src} alt={img.label} width={1024} height={1024} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent opacity-80 group-hover:opacity-60 transition" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <span className="font-display text-lg uppercase font-bold">{img.label}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+      ))}
+    </div>
+  </div>
+</section>
+```
+
+);
 }
 
 function Contact() {
@@ -459,7 +495,7 @@ function Footer() {
             <span className="grid h-9 w-9 place-items-center rounded-md bg-primary text-primary-foreground">GE</span>
             Green Edge Landscaping<span className="text-primary">.</span>
           </div>
-          <p className="mt-4 max-w-sm text-sm text-muted-foreground">Building elite basketball athletes through skill, strength, and relentless work.</p>
+          <p className="mt-4 max-w-sm text-sm text-muted-foreground">Transforming outdoor spaces through professional landscaping, premium garden design, and quality quality craftsmanship.</p>
           <div className="mt-6 flex gap-3">
             {[Instagram, Youtube, Twitter, Facebook].map((Icon, i) => (
               <a key={i} href="#" aria-label="social" className="grid h-10 w-10 place-items-center rounded-md border border-border hover:bg-primary hover:text-primary-foreground hover:border-primary transition">
@@ -477,16 +513,16 @@ function Footer() {
         <div>
           <div className="text-xs uppercase tracking-wider font-bold text-primary mb-4">Contact</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>(555) 234-8821</li>
-            <li>train@greenedgelandscaping.com</li>
-            <li>2840 Court Street, Austin TX</li>
+            <li>0400 123 456</li>
+            <li>info@greenedgelandscaping.com</li>
+            <li>Melbourne, Victoria</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-border">
         <div className="container-x py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
           <span>© {new Date().getFullYear()} Green Edge Landscaping. All rights reserved.</span>
-          <span>Train Hard. Train Smart.</span>
+          <span>Built to last. Designed to impress.</span>
         </div>
       </div>
     </footer>
