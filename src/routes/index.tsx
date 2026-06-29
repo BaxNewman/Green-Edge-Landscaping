@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
 const NAV = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
-  { href: "#programs", label: "Programs" },
+  { href: "#services", label: "Services" },
   { href: "#testimonials", label: "Testimonials" },
   { href: "#gallery", label: "Gallery" },
   { href: "#contact", label: "Contact" },
@@ -93,7 +93,7 @@ function Hero() {
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img 
-  src={heroGarden} 
+  src={heroDunk} 
   alt="Beautiful landscaped outdoor garden design" 
   width={1600} 
   height={1200} 
@@ -167,8 +167,8 @@ function About() {
           <div className="absolute -inset-4 border border-primary/30 rounded-md -z-10" />
 
           <img
-            src="/landscaping-team.jpg"
-            alt="Professional landscaping team working"
+            src={trainerImg}
+            alt="Landscaper working on a lawn"
             className="rounded-md w-full object-cover"
           />
         </div>
@@ -217,7 +217,7 @@ function About() {
   );
 }
 
-const PROGRAMS = [
+const SERVICES = [
   {
     icon: Target,
     title: "Garden Design",
@@ -246,14 +246,14 @@ const PROGRAMS = [
   },
 ];
 
-function Programs() {
-return ( <section id="programs" className="relative py-24 md:py-32 bg-gradient-to-b from-background to-card/30"> <div className="container-x"> <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14"> <div> <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Our Services</span> <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase">
+function Services() {
+return ( <section id="services" className="relative py-24 md:py-32 bg-gradient-to-b from-background to-card/30"> <div className="container-x"> <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14"> <div> <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Our Services</span> <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase">
 Landscaping <span className="text-primary">Solutions</span> </h2> </div> <p className="max-w-md text-muted-foreground">
 From simple garden upgrades to complete outdoor transformations, every project is designed to improve your property's appearance, value, and functionality. </p> </div>
 
 
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      {PROGRAMS.map((p, i) => (
+      {SERVICES.map((p, i) => (
         <article key={p.title} className="group relative flex flex-col bg-card border border-border rounded-md p-6 hover:border-primary transition-all duration-300 hover:-translate-y-1">
           {p.tag && (
             <span className="absolute -top-3 left-6 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
@@ -288,20 +288,20 @@ From simple garden upgrades to complete outdoor transformations, every project i
 
 const TESTIMONIALS = [
 {
-name: "Michael T.",
-role: "Homeowner",
+name: "Person 1",
+role: "Example Customer",
 quote: "Green Edge completely transformed our backyard. The team was professional, reliable, and the finished result exceeded our expectations.",
 stat: "5-Star Review"
 },
 {
-name: "Emma R.",
-role: "Property Owner",
+name: "Person 2",
+role: "Example Customer",
 quote: "From the initial consultation to the final touches, everything was handled professionally. Our garden has never looked better.",
 stat: "100% Satisfied"
 },
 {
-name: "David P.",
-role: "Local Resident",
+name: "Person 3",
+role: "Example Customer",
 quote: "Excellent workmanship and attention to detail. The new landscaping has completely changed the look of our home.",
 stat: "Completed On Time"
 },
@@ -421,15 +421,15 @@ function Contact() {
         <div className="lg:col-span-2">
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Get Started</span>
           <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
-            Book your <br /><span className="text-primary">first session.</span>
+            Request <br /><span className="text-primary">free quote.</span>
           </h2>
-          <p className="mt-5 text-muted-foreground">Reach out to schedule a free assessment. We'll build a custom training plan for your goals.</p>
+          <p className="mt-5 text-muted-foreground">Reach out to get a free quote.</p>
 
           <div className="mt-10 space-y-5">
             {[
-              { icon: Phone, label: "Call", value: "(555) 234-8821" },
+              { icon: Phone, label: "Call", value: "(000) 000-0000" },
               { icon: Mail, label: "Email", value: "train@greenedgelandscaping.com" },
-              { icon: MapPin, label: "Facility", value: "2840 Court Street, Building B\nAustin, TX 78704" },
+              { icon: MapPin, label: "Facility", value: "0000 World Street, Building A\nJeff, TX 00000" },
             ].map((c) => (
               <div key={c.label} className="flex gap-4">
                 <div className="grid h-11 w-11 shrink-0 place-items-center rounded-md bg-primary/10 text-primary">
@@ -460,12 +460,16 @@ function Contact() {
               <Field label="Email" name="email" type="email" />
               <Field label="Phone" name="phone" type="tel" />
               <div className="sm:col-span-2">
-                <label className="block text-xs uppercase tracking-wider font-semibold mb-2">Program of Interest</label>
-                <select name="program" className="w-full bg-background border border-border rounded-md px-4 py-3 focus:border-primary focus:outline-none">
-                  <option>Individual Training</option>
-                  <option>Small Group Training</option>
-                  <option>Vertical Jump Program</option>
-                  <option>Holiday Camp</option>
+                <label className="block text-xs uppercase tracking-wider font-semibold mb-2">What service are you interested in?</label>
+                <select name="service" className="w-full bg-background border border-border rounded-md px-4 py-3 focus:border-primary focus:outline-none">
+                  <option>Garden Design</option>
+                  <option>Lawn Installation</option>
+                  <option>Landscaping & Outdoor Design</option>
+                  <option>Retaining Walls</option>
+                  <option>Paving & Outdoor Areas</option>
+                  <option>Garden Maintenance</option>
+                  <option>Irrigation Systems</option>
+                  <option>Complete Backyard Makeover</option>
                 </select>
               </div>
               <div className="sm:col-span-2">
@@ -519,7 +523,7 @@ function Footer() {
         <div>
           <div className="text-xs uppercase tracking-wider font-bold text-primary mb-4">Contact</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>0400 123 456</li>
+            <li>0000 000 000</li>
             <li>info@greenedgelandscaping.com</li>
             <li>Melbourne, Victoria</li>
           </ul>
@@ -542,7 +546,7 @@ function Home() {
       <main>
         <Hero />
         <About />
-        <Programs />
+        <Services />
         <Testimonials />
         <Gallery />
         <Contact />
